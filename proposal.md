@@ -1,0 +1,3 @@
+For this project I am going to re-create my original Contractor project from BEW 1.1. This way I can both upgrade that project and still be able to apply what I've learned from the Django web framework. 
+
+This project is for the purpose of creating a website for the Space Explorer in us! As the site admin, I will be able to take in requests from users for different Space Tech items to be created especially for them! (Space Contracting~~)
