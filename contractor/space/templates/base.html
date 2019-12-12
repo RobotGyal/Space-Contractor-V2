@@ -1,0 +1,22 @@
+{% load static %}
+
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    {% block title %}
+    {% endblock %}
+
+</head>
+
+<body>
+    <!-- {% include 'partials/navbar.html' %} -->
+    <p> Two layers deep</p>
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+
+</html>

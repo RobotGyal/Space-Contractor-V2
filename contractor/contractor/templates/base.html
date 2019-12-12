@@ -1,0 +1,21 @@
+{% load static %}
+
+
+<html>
+
+<head>
+    <link rel='stylesheet' href="{% static 'index.css' %}">
+    {% block title %}
+    {% endblock %}
+
+</head>
+
+<body>
+    <p>One layer deep</p>
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+
+</html>
