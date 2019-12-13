@@ -16,13 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from space import views
+from users import views as user_views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name = 'index'),
-    path('space/', include('space.urls'))
+    path('space/', include('space.urls')),
+    path('register', user_views.register, name='register')
 ]
 
 urlpatterns += staticfiles_urlpatterns()
