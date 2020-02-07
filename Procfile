@@ -1,1 +1,1 @@
-web: gunicorn contractor:app --log-file -
+web: python manage.py collectstatic --noinput; gunicorn contractor.wsgi --log-file -
