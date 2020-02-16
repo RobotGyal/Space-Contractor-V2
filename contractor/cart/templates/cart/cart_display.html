@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+<!--Title and Header-->
+<h1>I-Planetery</h1>
+<h2> These wonderful items will be crafted just for you!!! </h2>
+
+{% endblock %}
+
+<br><br>
+
+{% block content %}
+
+
+<!-- {% for item in cart_items %}
+    <h3><a href='cart/item/'> {{ item.title }}</a></h3>
+    <h4>{{ item.description }}</h4>
+{% endfor %} -->
+
+<br><br><br>
+<!--Buttons-->
+<form action="/cart/add">
+    <button type ='submit'> Request Devices! </button>
+</form>
+<form action="/">
+    <button type ='submit'> Beam Me Home! </button>
+</form>
+
+{% endblock %}
