@@ -1,1 +1,1 @@
-web: gunicorn contractor.contractor.wsgi
+web: gunicorn contractor.wsgi
