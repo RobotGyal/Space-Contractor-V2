@@ -1,1 +1,1 @@
-web: gunicorn space-contractor-v2.wsgi
+web: gunicorn contractor.wsgi
