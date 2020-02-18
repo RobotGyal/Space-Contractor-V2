@@ -28,7 +28,7 @@ SECRET_KEY = ')d&j%ak!o3a&&-i7^4!b$i9t2dx=tbm=is!)sj8y^-h&8r#++q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['space-contracotr-v2.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['space-contractor-v2.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
