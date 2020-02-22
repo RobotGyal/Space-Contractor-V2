@@ -6,27 +6,25 @@
 
 <br><br><br><br>
 
-<form method ='POST' action='cart-display'> <!--Add items to cart-->
+<form method ='POST' action='/cart/cart_display/'> 
+    {% csrf_token %}<!--Add items to cart-->
     <fieldset>
         <legend> Add Cart Items</legend>
     <!--Title-->
     <p>
-        <label for ='title' > Title </label><br>
-        <input type='text' name='title'>
+        <label for ='name' > Name </label><br>
+        <input type='text' name='name'>
     </p>
     <!--Description-->
     <p>
-        <label for='description'>Description</label><br>
-        <input type='text' name='description' /> 
+        <label for='content'>Content</label><br>
+        <input type='text' name='content' /> 
     </p>
     </fieldset>
-
-</form>
-
-<form action = "/cart/cart_display">
     <p>
         <button type=submit> Submit Item Request </button>
     </p>
+
 </form>
 
 

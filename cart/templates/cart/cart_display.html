@@ -13,6 +13,13 @@
 {% block content %}
 
 
+{% for item in items %}
+    <h1><strong>{{item.name}}</strong></h1>
+    <h3><strong>{{item.content}}</strong></h3>
+    <h3><strong>{{item.date_posted | date:"F d, Y"}}</strong></h3>
+    <h3><strong>{{item.author}}</strong></h3>
+{% endfor %}
+
 <br><br><br>
 <!--Buttons-->
 <form action="/cart/add">
@@ -21,13 +28,6 @@
 <form action="/">
     <button type ='submit'> Beam Me Home! </button>
 </form>
-
-{%for item in items %}
-    <h1><strong>{{item.name}}</strong></h1>
-    <h3><strong>{{item.content}}</strong></h3>
-    <h3><strong>{{item.date_posted | date:"F d, Y"}}</strong></h3>
-    <h3><strong>{{item.author}}</strong></h3>
-{% endfor %}
 
 
 {% endblock %}
