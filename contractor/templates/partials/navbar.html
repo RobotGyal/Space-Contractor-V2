@@ -1,0 +1,11 @@
+{% block navbar %}
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color:red;">
+    <a href="{%url 'index' %}"><img src="/static/entries/mark.png" alt="home" style="width: 70px; height: 90px;">   </a>
+    <form class="form-inline ml-auto">
+      <div class="text-white">    <h4>User: {{user.username}}</h4></strong></div>
+      <a href="/logout" class="btn btn-outline-light btn-sm" style="margin-left: 20px;">Log Out</a>
+      <a href="/login" class="btn btn-outline-light btn-sm">Log In</a>
+      <a href="/account/signup" class="btn btn-outline-light btn-sm">Sign Up</a>
+    </form>
+  </nav>
+  {% endblock navbar %}

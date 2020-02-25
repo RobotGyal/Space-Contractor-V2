@@ -4,6 +4,16 @@
 
 <head>
     <link rel='stylesheet' href="{% static 'index.css' %}">
+    <div style="color: whitesmoke; text-align: center; font-size: 1.5em;">
+        {% if messages %}
+            {%for message in messages%}
+            <div class='alert alert-{{message.tags}}'>
+                {{message}}
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div><br><br>
+
     {% block title %}
     {% endblock %}
 
@@ -12,13 +22,7 @@
 <body>
     <p>One layer deep</p>
 
-    {% if messages %}
-        {%for message in messages%}
-        <div class='alert alert-{{message.tags}}'>
-            {{message}}
-        </div>
-        {% endfor %}
-    {% endif %}
+
 
     {% block content %}
     {% endblock %}
