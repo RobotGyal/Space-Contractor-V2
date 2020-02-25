@@ -143,4 +143,4 @@ DATABASES['default'].update(db_from_env)
 
 LOGIN_REDIRECT_URL = 'index' 
 
-CRISPY_TEMPLATE_PACK='bootstrap4'
+CRISPY_TEMPLATE_PACK='uni_form'
