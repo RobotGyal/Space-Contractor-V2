@@ -10,8 +10,6 @@ def cart_home(request):
 
 def cart_add(request):
     if request.method == 'POST':
-        print("entered post function")
-        # if request.POST.get('name') and request.POST.get('content'):
         item = Item()
         item.name = request.POST.get('name')
         item.content = request.POST.get('content')

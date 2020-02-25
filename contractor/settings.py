@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['space-contractor-v2.herokuapp.com', '127.0.0.1']
 INSTALLED_APPS = [
     'space.apps.SpaceConfig',
     'users.apps.UsersConfig',
+    'crispy_forms',
     'cart.apps.CartConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -139,3 +140,7 @@ STATICFILES_DIRS = (
 # database
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
+
+LOGIN_REDIRECT_URL = 'index' 
+
+CRISPY_TEMPLATE_PACK='bootstrap4'

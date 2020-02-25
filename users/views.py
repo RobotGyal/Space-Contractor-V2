@@ -1,17 +1,24 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render,redirect
+from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib import messages
+from django.http import HttpResponseRedirect, HttpResponse
+from django.urls import reverse
+from .forms import UserSignUpForm
 
 
-def register(request):
+# Create your views here.
+def signup(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserSignUpForm(request.POST)
         if form.is_valid():
+            form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f"You have created a account for {username}!")
-            return redirect('store-display')
-            
+            messages.success(request, f'Your account has been created {username}! ')
+            return redirect('login')
     else:
-        form = UserCreationForm()
+        form = UserSignUpForm()
+    return render(request, 'users/signup.html', {'form': form})
 
-    return render(request, 'users/register.html', {'form': form})
+
+def  profile(request):
+    return render(request, 'users/profile.html')

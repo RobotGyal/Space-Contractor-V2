@@ -18,15 +18,18 @@ from django.urls import path, include
 from space import views
 from users import views as user_views
 from cart import views as cart_views
+from django.contrib.auth import views as auth_views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name = 'index'),
+    path('account/signup/',user_views.signup, name='signup'),
+    path('login/',auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('logout/',auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('space/', include('space.urls')),
     path('cart/', include('cart.urls')),
-    path('register', user_views.register, name='register'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
