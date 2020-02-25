@@ -6,7 +6,7 @@
 
 <br><br><br><br>
 
-<form method ='POST' action='/cart/cart_display/'> 
+<form method ='POST' action='/cart/add/'> 
     {% csrf_token %}<!--Add items to cart-->
     <fieldset>
         <legend> Add Cart Items</legend>
@@ -18,7 +18,7 @@
     <!--Description-->
     <p>
         <label for='content'>Content</label><br>
-        <input type='text' name='content' /> 
+        <input type='text' name='content'> 
     </p>
     <!--Author-->
     <p>
