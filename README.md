@@ -4,9 +4,11 @@
 ![Image](screenshot.png)
 
 ## Motivation
-This project is for the purpose of creating a website for the Space Explorer in us!
+**Build Futuristic Space Items**
 
-Buy futuristic Space Tech items!
+For this project I am going to re-create my original Contractor project from BEW 1.1. This way I can both upgrade that project and still be able to apply what I've learned from the Django web framework. 
+
+This project is for the purpose of creating a website for the Space Explorer in us! As the site admin, I will be able to take in requests from users for different Space Tech items to be created especially for them! (Space Contracting~~)
 
 ## Proposal
 [Contractor Proposal](proposal.md)
@@ -16,8 +18,8 @@ Buy futuristic Space Tech items!
 [Contractor V2](http://space-contractor-v2.herokuapp.com/)
 
 ## Built With
-* [Python]()
-* [Django]()
+* [Python](python.org)
+* [Django](djangobook.com)
 
 ## Code Example
 ```
