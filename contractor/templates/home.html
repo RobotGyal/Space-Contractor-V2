@@ -13,29 +13,32 @@
     <button type="submit">See Previous Creations!</button>
 </form>
 
-<!--Buttons-->
+{% if user.is_authenticated %}  <!--logged in-->
 <form action="/cart/add">
     <button type ='submit'> Request Devices! </button>
 </form>
 
-<!--Buttons-->
+<form action="/logout">
+    <button type ='submit'>  Logout! </button>
+</form>
+
+{% else %}<!--Not logged in-->
+
 <form action="/signup">
     <button type ='submit'> New User? Signup! </button>
 </form>
 
-<!--Buttons-->
 <form action="/login">
     <button type ='submit'> Returning User? Login! </button>
 </form>
+
+{% endif %}
 
 <nav class="navbar navbar-expand-md navbar-dark" style="background-color:transparent">
     <form class="form-inline mr-auto">
       <div class="text-white">    <h4 style="text-align: right";>User: {{user.username}}</h4></strong></div>
     </form>
   </nav>
-
-
-
 
 {%endblock%}
 
