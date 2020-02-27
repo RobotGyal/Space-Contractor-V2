@@ -1,4 +1,7 @@
+{% extends 'base.html' %}
+
 {% load static %}
+
 
 <html>
 
@@ -7,6 +10,8 @@
     {% block title %}
     {% endblock %}
 </head>
+{% block content %}
+<div style="position: absolute; top: 50%;left: 70%;margin: -100px 0 0 -100px;">
 
 <body>
     <!--HERO-->
@@ -35,8 +40,8 @@
             </div>
         </div>
     </div>
+</div>
 
-    {% block content %}
     {% endblock %}
 
 </body>
